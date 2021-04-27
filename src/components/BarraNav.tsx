@@ -2,30 +2,45 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import styled from "styled-components";
 
-//====////==== COMPONENTE ====\\\\====\\
+//====////====>>>>> COMPONENTE <<<<<====\\\\====\\
 const BarraNav = () => {
   return (
     <Contenedor fluid>
       <Row>
+        {/*==========> Logotipo <==========*/}
         <Columna md="auto">
           <H1>Invitación</H1>
         </Columna>
+
+        {/*==========> Botones de navegación <==========*/}
         <Columna>
-          <BotonFunciones variant="light">Funciones</BotonFunciones>
-          <BotonClaro variant="light">Extensión</BotonClaro>
-          <BotonClaro variant="light">Programas de referencia</BotonClaro>
-          <BotonClaro variant="light">Personas</BotonClaro>
+          <BotonFunciones variant="light" className="mr-1">
+            Funciones
+          </BotonFunciones>
+          <BotonClaro variant="light" className="mr-1">
+            Extensión
+          </BotonClaro>
+          <BotonClaro variant="light" className="mr-1">
+            Programas de referencia
+          </BotonClaro>
+          <BotonClaro variant="light" className="mr-1">
+            Personas
+          </BotonClaro>
         </Columna>
+
+        {/*==========> Botones de cuenta <==========*/}
         <Columna md="auto">
           <BotonInicio variant="light">Iniciar sesión</BotonInicio>
-          <Boton variant="dark">Regístrate</Boton>
+          <Boton variant="dark" style={{ "font-weight": "bold" }}>
+            Regístrate
+          </Boton>
         </Columna>
       </Row>
     </Contenedor>
   );
 };
 
-//====////==== ESTILOS ====\\\\====\\
+//====////====>>>>> ESTILOS <<<<<====\\\\====\\
 const Contenedor = styled(Container)`
   margin-top: 30px;
   padding: 0 7% 0 7%;

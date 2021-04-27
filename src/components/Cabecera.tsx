@@ -1,14 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-
 import gato from "../images/hero-image.png";
-import airbnb from "../images/company-1.png";
-import uber from "../images/company-2.png";
-import coinbase from "../images/company-3.png";
-import robinhood from "../images/company-4.png";
 
 //====////====>>>>> COMPONENTE <<<<<====\\\\====\\
 const Cabecera = () => {

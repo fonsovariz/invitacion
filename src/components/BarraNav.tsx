@@ -21,7 +21,7 @@ const BarraNav = () => {
             Extensión
           </BotonClaro>
           <BotonClaro variant="light" className="mr-1">
-            Programas de referencia
+            Programas de recomendación
           </BotonClaro>
           <BotonClaro variant="light" className="mr-1">
             Personas

@@ -12,11 +12,11 @@ const Cabecera = () => {
       <Row>
         {/*==========> Lado Izquierdo <==========*/}
         <ColumnaIzquierda>
-          <H2>La Comunidad de Referencias.</H2>
+          <H2>La Comunidad de Invitaciones.</H2>
           <P>
             <span className="font-weight-bold">Invitación</span> es la nueva red
             social donde todos son recompensados. Únete, publica tus enlaces de
-            referencia y obtén recompensas automáticamente.
+            recomendación o invitación y obtén recompensas automáticamente.
           </P>
 
           {/*-----> Busqueda <-----*/}
@@ -34,8 +34,8 @@ const Cabecera = () => {
               </Col>
               {/*** Botón ***/}
               <Col xs={5}>
-                <Boton variant="danger" type="button" onClick={() => null}>
-                  Comienza - es gratis
+                <Boton variant="danger" type="button" className="btn-block">
+                  Comienza ya, es gratis
                 </Boton>
               </Col>
             </Row>

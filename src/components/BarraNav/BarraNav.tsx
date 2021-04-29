@@ -1,21 +1,31 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
-import styled from "styled-components";
+import { Row } from "react-bootstrap";
+import {
+  Contenedor,
+  Columna,
+  H1,
+  BotonFunciones,
+  BotonClaro,
+  BotonInicio,
+  Boton,
+} from "./estilos";
 
-//====////====>>>>> COMPONENTE <<<<<====\\\\====\\
+/**
+ * Un componente que renderiza la barra de navegación principal de la aplicación.
+ */
 const BarraNav = () => {
   return (
     <Contenedor fluid>
       <Row>
-        {/*==========> Logotipo <==========*/}
+        {/** Logotipo */}
         <Columna md="auto">
           <H1>Invitación</H1>
         </Columna>
 
-        {/*==========> Botones de navegación <==========*/}
+        {/** Botones de navegación */}
         <Columna>
           <BotonFunciones variant="light" className="mr-1">
-            Funciones
+            Características
           </BotonFunciones>
           <BotonClaro variant="light" className="mr-1">
             Extensión
@@ -28,7 +38,7 @@ const BarraNav = () => {
           </BotonClaro>
         </Columna>
 
-        {/*==========> Botones de cuenta <==========*/}
+        {/** Botones de cuenta */}
         <Columna md="auto">
           <BotonInicio variant="light">Iniciar sesión</BotonInicio>
           <Boton variant="dark" style={{ "font-weight": "bold" }}>
@@ -39,38 +49,5 @@ const BarraNav = () => {
     </Contenedor>
   );
 };
-
-//====////====>>>>> ESTILOS <<<<<====\\\\====\\
-const Contenedor = styled(Container)`
-  margin-top: 30px;
-  padding: 0 7% 0 7%;
-`;
-
-const Columna = styled(Col)`
-  padding: 0;
-`;
-
-const H1 = styled.h1`
-  font-size: 1.2rem;
-  font-weight: bold;
-`;
-
-const Boton = styled(Button)`
-  font-size: 0.8rem;
-`;
-
-const BotonClaro = styled(Boton)`
-  background-color: white;
-  border: none;
-`;
-
-const BotonFunciones = styled(BotonClaro)`
-  margin-left: 10%;
-`;
-
-const BotonInicio = styled(BotonClaro)`
-  font-weight: bold;
-  margin-right: 10px;
-`;
 
 export default BarraNav;

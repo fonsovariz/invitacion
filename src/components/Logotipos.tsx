@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-
 import airbnb from "../images/company-1.png";
 import uber from "../images/company-2.png";
 import coinbase from "../images/company-3.png";
@@ -8,6 +7,9 @@ import robinhood from "../images/company-4.png";
 import transferwise from "../images/company-5.png";
 import n26 from "../images/company-6.png";
 
+/**
+ * Un componente que renderiza una fila de logotipos de diversas empresas.
+ */
 const Logotipos = () => {
   return (
     <Container className="mt-5 pt-5">

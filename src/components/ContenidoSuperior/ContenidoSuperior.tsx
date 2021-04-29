@@ -1,21 +1,26 @@
 import React from "react";
-import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCommentDollar,
   faCheckCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import ilusIzquierda from "../../images/left-illustration.png";
+import ilusDerecha from "../../images/right-illustration.png";
+import { Img, H2, H3, P, FAIcon, Boton } from "./estilos";
 
-import ilusIzquierda from "../images/left-illustration.png";
-import ilusDerecha from "../images/right-illustration.png";
-
-//=====/////=====>>>>> COMPONENTE <<<<<=====\\\\\=====\\
+/**
+ * Un componente que renderiza contenido dividido en tres columnas.
+ * Las columnas de la izquierda y derecha visualizan imagenes
+ * para estilizar la página y la columna del medio visualiza
+ * contenido textual que informa al usuario sobre los beneficios
+ * de utilizar la aplicación.
+ */
 const ContenidoSuperior = () => {
   return (
     <Container className=" my-5 pt-5">
       <Row className="d-flex justify-content-between align-items-center">
-        {/*==========> Ilustración en la izquierda <==========*/}
+        {/** Ilustración en la izquierda */}
         <Col xs={4}>
           <Img
             src={ilusIzquierda}
@@ -23,9 +28,9 @@ const ContenidoSuperior = () => {
           />
         </Col>
 
-        {/*==========> Contenido textual <==========*/}
+        {/** Contenido textual */}
         <Col xs={4}>
-          {/*-----> Cabecera <-----*/}
+          {/** Cabecera */}
           <H2 className="mb-4 pb-2 ">
             Recompensas en Efectivo
             <FontAwesomeIcon
@@ -34,7 +39,7 @@ const ContenidoSuperior = () => {
             />
           </H2>
 
-          {/*-----> Contenido <-----*/}
+          {/** Contenido */}
           <H3>
             <FAIcon icon={faCheckCircle} /> Publica
           </H3>
@@ -63,7 +68,7 @@ const ContenidoSuperior = () => {
             y promueve tu página para obtener más bonificaciones y descuentos.
           </P>
 
-          {/*-----> Pie <-----*/}
+          {/** Pie */}
           <div className="text-center ">
             <Boton type="Boton" className="btn-danger w-75">
               Comienza ya, es gratis
@@ -71,7 +76,7 @@ const ContenidoSuperior = () => {
           </div>
         </Col>
 
-        {/*==========> Ilustración en la derecha <==========*/}
+        {/** Ilustración en la derecha */}
         <Col xs={4} className="text-right">
           <Img
             src={ilusDerecha}
@@ -82,46 +87,5 @@ const ContenidoSuperior = () => {
     </Container>
   );
 };
-
-//=====/////=====>>>>> ESTILOS <<<<<=====\\\\\=====\\
-const FAIcon = styled(FontAwesomeIcon)`
-  color: #cf2745;
-  margin-right: 7px;
-`;
-
-const Boton = styled(Button)`
-  background-color: #cf2745;
-  border-color: #cf2745;
-
-  &:hover {
-    background-color: #f04867;
-    border-color: #f04867;
-  }
-
-  &:focus {
-    background-color: #cf2745;
-    border-color: #cf2745;
-  }
-`;
-
-const Img = styled.img`
-  width: 90%;
-`;
-
-const H2 = styled.h2`
-  font-size: 2.2rem;
-  font-weight: bold;
-  text-align: center;
-`;
-
-const H3 = styled.h3`
-  font-size: 0.95rem;
-  font-weight: bold;
-`;
-
-const P = styled.p`
-  font-size: 0.9rem;
-  margin-bottom: 25px;
-`;
 
 export default ContenidoSuperior;

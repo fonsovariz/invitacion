@@ -10,7 +10,13 @@ import {
 import RectanguloNegro from "./RectanguloNegro/RectanguloNegro";
 import inscripcion from "../images/signup-image.png";
 
+/**
+ * Un componente que renderiza más información sobre
+ * la aplicación de manera similar a la cabecera
+ * utilizando el componente RectanguloNegro.
+ */
 const ContenidoInferior = () => {
+  //** Dos elementos "p" que se usarán como texto principal en RectanguloNegro */
   const contenido = () => {
     return (
       <div>
@@ -28,6 +34,7 @@ const ContenidoInferior = () => {
     );
   };
 
+  /** Dos botones que se usarán como pie en RectanguloNegro*/
   const pie = (Boton: StyledComponent<Button, any, {}, never>) => {
     return (
       <div>
@@ -37,6 +44,7 @@ const ContenidoInferior = () => {
               Regístrate
             </Button>
           </Col>
+
           <Col className="pl-1">
             <Boton variant="danger" type="button" className="btn-block">
               Conoce más
@@ -48,6 +56,7 @@ const ContenidoInferior = () => {
     );
   };
 
+  /** Rénder */
   return (
     <div>
       <RectanguloNegro

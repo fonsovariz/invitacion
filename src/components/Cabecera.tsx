@@ -11,7 +11,7 @@ import gato from "../images/hero-image.png";
  * utilizando el componente RectanguloNegro.
  */
 const Cabecera = () => {
-  /** Elemento «p» que se usará como texto principal en RectanguloNegro */
+  /** Un elemento "p" que se usará como texto principal en RectanguloNegro */
   const contenido = (): ReactElement => {
     return (
       <p>
@@ -22,7 +22,7 @@ const Cabecera = () => {
     );
   };
 
-  /** Campo de busqueda (sin funcionamiento) que se usará como pie en RectanguloNegro*/
+  /** El campo de busqueda (sin funcionamiento) que se usará como pie en RectanguloNegro*/
   const busqueda = (
     Boton: StyledComponent<Button, any, {}, never>
   ): ReactElement => {

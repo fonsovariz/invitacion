@@ -6,6 +6,7 @@ import Cabecera from "./components/Cabecera";
 import Logotipos from "./components/Logotipos";
 import ContenidoSuperior from "./components/ContenidoSuperior/ContenidoSuperior";
 import ContenidoInferior from "./components/ContenidoInferior";
+import Imagenes from "./components/Imagenes";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Logotipos></Logotipos>
       <ContenidoSuperior></ContenidoSuperior>
       <ContenidoInferior></ContenidoInferior>
+      <Imagenes></Imagenes>
     </>
   );
 }

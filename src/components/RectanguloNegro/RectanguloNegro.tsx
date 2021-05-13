@@ -13,6 +13,9 @@ type Props = {
   imagen: {
     url: string;
     alt: string;
+    width?: string;
+    col: number;
+    colClases?: string;
   };
 };
 
@@ -31,12 +34,12 @@ const RectanguloNegro = ({ titulo, contenido, pie, imagen }: Props) => {
           <ColumnaIzquierda>
             <H2>{titulo}</H2>
             <Div>{contenido()}</Div>
-            <div>{pie(Boton)}</div>
+            {pie && <div>{pie(Boton)}</div>}
           </ColumnaIzquierda>
 
           {/** Lado Derecho */}
-          <Col xs={5}>
-            <Img src={imagen.url} alt={imagen.alt} />
+          <Col xs={imagen.col} className={imagen.colClases}>
+            <Img src={imagen.url} alt={imagen.alt} width={imagen.width} />
           </Col>
         </Row>
       </Contenedor>

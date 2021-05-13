@@ -40,7 +40,7 @@ const Cabecera = () => {
           {/** Botón */}
           <Col xs={5}>
             <Boton variant="danger" type="button" className="btn-block">
-              "Comienza ya, es gratis"
+              Comienza ya, es gratis
             </Boton>
           </Col>
         </Row>
@@ -56,8 +56,8 @@ const Cabecera = () => {
       pie={busqueda}
       imagen={{
         url: gato,
-        alt:
-          "Un dibujo de un gato negro sentado en un escritorio frente a una computadora siendo sorprendido por manos que salen de la pantalla para ofrecerle un regalo envuelto.",
+        alt: "Un dibujo de un gato negro sentado en un escritorio frente a una computadora siendo sorprendido por manos que salen de la pantalla para ofrecerle un regalo envuelto.",
+        col: 5,
       }}
     />
   );

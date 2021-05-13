@@ -14,6 +14,7 @@ function App() {
       <Cabecera></Cabecera>
       <Logotipos></Logotipos>
       <ContenidoSuperior></ContenidoSuperior>
+      <ContenidoInferior></ContenidoInferior>
     </>
   );
 }

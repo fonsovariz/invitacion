@@ -14,7 +14,7 @@ export const Div = styled.div`
 
 export const Img = styled.img`
   position: absolute;
-  width: 95%;
+  width: ${(props) => (props.width ? props.width : "95%")};
 `;
 
 /** React Bootstrap */

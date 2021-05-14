@@ -62,9 +62,9 @@ const ContenidoSuperior = () => {
           </H3>
           <P className="mb-5">
             Explora{" "}
-            <a href="#" target="_blank">
+            <Button variant="link" target="_blank">
               más programas de recomendación
-            </a>{" "}
+            </Button>{" "}
             y promueve tu página para obtener más bonificaciones y descuentos.
           </P>
 

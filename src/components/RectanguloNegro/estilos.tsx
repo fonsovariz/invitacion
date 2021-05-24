@@ -24,8 +24,8 @@ export const Contenedor = styled(Container)`
   margin-top: 30px;
 `;
 
-export const ColumnaIzquierda = styled(Col)`
-  padding: 60px;
+export const ColumnaTextual = styled(Col)`
+  padding: ${(props) => (props.padding ? props.padding : "60px")};
 `;
 
 export const Boton = styled(Button)`

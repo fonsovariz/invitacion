@@ -1,15 +1,15 @@
-[![Contributors][contributors-shield]][contributors-enlace]
-[![Forks][forks-shield]][forks-enlace]
-[![Stargazers][stars-shield]][stars-enlace]
-[![Issues][issues-shield]][issues-enlace]
-[![License][license-shield]][license-enlace]
-[![LinkedIn][linkedin-shield]][linkedin-enlace]
+[![Contributors][contributors-shield]][contributors-link]
+[![Forks][forks-shield]][forks-link]
+[![Stargazers][stars-shield]][stars-link]
+[![Issues][issues-shield]][issues-link]
+[![License][license-shield]][license-link]
+[![LinkedIn][linkedin-shield]][linkedin-link]
 
 <!-- Proyect Logo -->
 <br />
 <p align="center">
   <a href="https://github.com/fonsovariz/invitacion">
-    <img src="./public/sobre.png" alt="Logotipo">
+    <img src="./public/sobre.png" alt="Logo">
   </a>
 
   <h3 align="center">Invitación</h3>
@@ -69,7 +69,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Alfonso Javariz - [Twitter](https://twitter.com/fonsovariz) - [LinkedIn][linkedin-enlace]
+Alfonso Javariz - [Twitter](https://twitter.com/fonsovariz) - [LinkedIn][linkedin-link]
 
 Project Link: [https://github.com/fonsovariz/invitacion](https://github.com/fonsovariz/invitacion)
 
@@ -84,15 +84,15 @@ Project Link: [https://github.com/fonsovariz/invitacion](https://github.com/fons
 <!-- Links and Images -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/fonsovariz/invitacion.svg?style=for-the-badge
-[contributors-enlace]: https://github.com/fonsovariz/invitacion/graphs/contributors
+[contributors-link]: https://github.com/fonsovariz/invitacion/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/fonsovariz/invitacion.svg?style=for-the-badge
-[forks-enlace]: https://github.com/fonsovariz/invitacion/network/members
+[forks-link]: https://github.com/fonsovariz/invitacion/network/members
 [stars-shield]: https://img.shields.io/github/stars/fonsovariz/invitacion.svg?style=for-the-badge
-[stars-enlace]: https://github.com/fonsovariz/invitacion/stargazers
+[stars-link]: https://github.com/fonsovariz/invitacion/stargazers
 [issues-shield]: https://img.shields.io/github/issues/fonsovariz/invitacion.svg?style=for-the-badge
-[issues-enlace]: https://github.com/fonsovariz/invitacion/issues
+[issues-link]: https://github.com/fonsovariz/invitacion/issues
 [license-shield]: https://img.shields.io/github/license/fonsovariz/invitacion.svg?style=for-the-badge
-[license-enlace]: https://github.com/fonsovariz/invitacion/blob/main/LICENSE
+[license-link]: https://github.com/fonsovariz/invitacion/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-enlace]: https://linkedin.com/in/fonsovariz
+[linkedin-link]: https://linkedin.com/in/fonsovariz
 [invitacion-screenshot]: ./public/invitacion-captura.png

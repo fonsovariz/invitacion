@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { StyledComponent } from "styled-components";
 import { Row, Col, Button } from "react-bootstrap";
-import { Contenedor, ColumnaIzquierda, H2, Div, Boton, Img } from "./estilos";
+import { Contenedor, ColumnaTextual, H2, Div, Boton, Img } from "./estilos";
 
 type Props = {
   /** El contenido textual que se mostrará en el lado izquierdo del componente */
@@ -39,24 +39,27 @@ const RectanguloNegro = ({
   return (
     <div>
       <Contenedor>
-        <Row>
+        <Row className="d-flex justify-content-between">
           {/** Lado Izquierdo */}
-          <ColumnaIzquierda>
+          <ColumnaTextual xs={derecha ? 5 : undefined}>
             {titulo && <H2>{titulo}</H2>}
             <Div>{contenido()}</Div>
             {pie && <div>{pie(Boton)}</div>}
-          </ColumnaIzquierda>
+          </ColumnaTextual>
 
-          {/** Lado Derecho */}
-          <Col
-            xs={imagen ? imagen.col : 6}
-            className={imagen ? imagen.colClases : undefined}
-          >
-            {imagen && (
+          {/** Lado Derecho - Imagen*/}
+          {imagen && (
+            <Col xs={imagen.col} className={imagen.colClases}>
               <Img src={imagen.url} alt={imagen.alt} width={imagen.width} />
-            )}
-            {derecha && <div>{derecha()}</div>}
-          </Col>
+            </Col>
+          )}
+
+          {/** Lado Derecho - Texto */}
+          {derecha && (
+            <ColumnaTextual xs={6} padding="60px 60px 30px 60px">
+              {derecha()}
+            </ColumnaTextual>
+          )}
         </Row>
       </Contenedor>
     </div>

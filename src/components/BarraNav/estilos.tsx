@@ -1,16 +1,16 @@
 import styled from "styled-components";
-import { Container, Col, Button } from "react-bootstrap";
+import { Container, Col, Button, Dropdown } from "react-bootstrap";
 
 /** Elementos */
 export const H1 = styled.h1`
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
   font-weight: bold;
 `;
 
 /** React Bootstrap */
 export const Contenedor = styled(Container)`
   margin-top: 30px;
-  padding: 0 7% 0 7%;
+  padding: ${(props) => (props.anchura <= 415 ? "0 10% 0 10%" : "0 7% 0 7%")};
 `;
 
 export const Columna = styled(Col)`
@@ -27,10 +27,15 @@ export const BotonClaro = styled(Boton)`
 `;
 
 export const BotonFunciones = styled(BotonClaro)`
-  margin-left: 10%;
+  margin-left: ${(props) => (props.anchura <= 965 ? "4%" : "10%")};
 `;
 
 export const BotonInicio = styled(BotonClaro)`
   font-weight: bold;
   margin-right: 10px;
+`;
+
+export const Menu = styled(Dropdown.Toggle)`
+  background-color: white;
+  border: none;
 `;

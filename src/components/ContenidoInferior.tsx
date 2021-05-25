@@ -23,7 +23,7 @@ const ContenidoInferior = ({ anchura }: Props) => {
   //** Dos elementos "p" que se usarán como texto principal en RectanguloNegro */
   const contenido = () => {
     return (
-      <div>
+      <div className={anchura <= 767 ? "text-center my-4" : undefined}>
         <p className="mb-1">
           <FontAwesomeIcon icon={faCheckCircle} className="text-white mr-1" />{" "}
           Enumera los productos que tú{" "}
@@ -43,19 +43,31 @@ const ContenidoInferior = ({ anchura }: Props) => {
     return (
       <div>
         <Row>
-          <Col className="pr-1">
+          <Col className={anchura > 520 ? "pr-1" : undefined}>
             <Button variant="light" type="button" className="btn-block ">
               Regístrate
             </Button>
           </Col>
 
-          <Col className="pl-1">
-            <Boton variant="danger" type="button" className="btn-block">
-              Conoce más
-            </Boton>
-          </Col>
-          <Col xs={2}></Col>
+          {anchura > 520 && (
+            <Col className="pl-1">
+              <Boton variant="danger" type="button" className="btn-block">
+                Conoce más
+              </Boton>
+            </Col>
+          )}
+          {anchura > 767 && <Col xs={2}></Col>}
         </Row>
+
+        {anchura <= 520 && (
+          <Row>
+            <Col className="mt-3">
+              <Boton variant="danger" type="button" className="btn-block">
+                Conoce más
+              </Boton>
+            </Col>
+          </Row>
+        )}
       </div>
     );
   };

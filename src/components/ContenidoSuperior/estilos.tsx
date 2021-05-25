@@ -23,6 +23,12 @@ export const P = styled.p`
   margin-bottom: 25px;
 `;
 
+export const Span = styled.span`
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
 /** React Bootstrap */
 export const FAIcon = styled(FontAwesomeIcon)`
   color: #cf2745;

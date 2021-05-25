@@ -29,7 +29,7 @@ function App() {
       <BarraNav anchura={anchura}></BarraNav>
       <Cabecera anchura={anchura}></Cabecera>
       <Logotipos anchura={anchura}></Logotipos>
-      <ContenidoSuperior></ContenidoSuperior>
+      <ContenidoSuperior anchura={anchura}></ContenidoSuperior>
       <ContenidoInferior anchura={anchura}></ContenidoInferior>
       <Imagenes></Imagenes>
       <Pie anchura={anchura}></Pie>

@@ -4,11 +4,14 @@ import {
   faCommentDollar,
   faCheckCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import ilusIzquierda from "../../images/left-illustration.png";
 import ilusDerecha from "../../images/right-illustration.png";
-import { Img, H2, H3, P, FAIcon, Boton } from "./estilos";
+import { Img, H2, H3, P, FAIcon, Boton, Span } from "./estilos";
 
+type Props = {
+  anchura: number;
+};
 /**
  * Un componente que renderiza contenido dividido en tres columnas.
  * Las columnas de la izquierda y derecha visualizan imagenes
@@ -16,20 +19,22 @@ import { Img, H2, H3, P, FAIcon, Boton } from "./estilos";
  * contenido textual que informa al usuario sobre los beneficios
  * de utilizar la aplicación.
  */
-const ContenidoSuperior = () => {
+const ContenidoSuperior = ({ anchura }: Props) => {
   return (
-    <Container className=" my-5 pt-5">
+    <Container className={anchura > 991 ? "my-5 pt-5" : "my-5 pt-2"}>
       <Row className="d-flex justify-content-between align-items-center">
         {/** Ilustración en la izquierda */}
-        <Col xs={4}>
-          <Img
-            src={ilusIzquierda}
-            alt="Un dibujo de una mujer saliendo caminando de la pantalla de un celular."
-          />
-        </Col>
+        {anchura > 991 && (
+          <Col xs={4}>
+            <Img
+              src={ilusIzquierda}
+              alt="Un dibujo de una mujer saliendo caminando de la pantalla de un celular."
+            />
+          </Col>
+        )}
 
         {/** Contenido textual */}
-        <Col xs={4}>
+        <Col xs={anchura > 991 ? 4 : anchura > 767 ? 6 : 12}>
           {/** Cabecera */}
           <H2 className="mb-4 pb-2 ">
             Recompensas en Efectivo
@@ -62,8 +67,8 @@ const ContenidoSuperior = () => {
           </H3>
           <P className="mb-5">
             Explora{" "}
-            <Button variant="link">más programas de recomendación</Button> y
-            promueve tu página para obtener más bonificaciones y descuentos.
+            <Span className="text-primary">más programas de recomendación</Span>{" "}
+            y promueve tu página para obtener más bonificaciones y descuentos.
           </P>
 
           {/** Pie */}
@@ -75,12 +80,14 @@ const ContenidoSuperior = () => {
         </Col>
 
         {/** Ilustración en la derecha */}
-        <Col xs={4} className="text-right">
-          <Img
-            src={ilusDerecha}
-            alt="Un dibujo de una mujer sentada con las piernas cruzadas sobre un taburete amarillo."
-          />
-        </Col>
+        {anchura > 767 && (
+          <Col xs={anchura > 991 ? 4 : 6} className="text-right">
+            <Img
+              src={ilusDerecha}
+              alt="Un dibujo de una mujer sentada con las piernas cruzadas sobre un taburete amarillo."
+            />
+          </Col>
+        )}
       </Row>
     </Container>
   );

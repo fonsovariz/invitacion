@@ -28,7 +28,7 @@ function App() {
     <>
       <BarraNav anchura={anchura}></BarraNav>
       <Cabecera anchura={anchura}></Cabecera>
-      <Logotipos></Logotipos>
+      <Logotipos anchura={anchura}></Logotipos>
       <ContenidoSuperior></ContenidoSuperior>
       <ContenidoInferior anchura={anchura}></ContenidoInferior>
       <Imagenes></Imagenes>

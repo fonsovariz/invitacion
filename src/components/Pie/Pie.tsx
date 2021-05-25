@@ -9,11 +9,15 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
+type Props = {
+  anchura: number;
+};
+
 /**
  * Un componente que renderiza el pie de página
  * que contiene enlaces a otras páginas y redes sociales.
  */
-const Pie = () => {
+const Pie = ({ anchura }: Props) => {
   //** Un elemento "p" que se usará como texto principal en RectanguloNegro */
   const contenido = () => {
     return (
@@ -94,6 +98,7 @@ const Pie = () => {
   return (
     <footer>
       <RectanguloNegro
+        anchura={anchura}
         titulo={undefined}
         contenido={contenido}
         pie={pie}

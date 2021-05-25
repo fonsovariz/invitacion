@@ -10,12 +10,16 @@ import {
 import RectanguloNegro from "./RectanguloNegro/RectanguloNegro";
 import inscripcion from "../images/signup-image.png";
 
+type Props = {
+  anchura: number;
+};
+
 /**
  * Un componente que renderiza más información sobre
  * la aplicación de manera similar a la cabecera
  * utilizando el componente RectanguloNegro.
  */
-const ContenidoInferior = () => {
+const ContenidoInferior = ({ anchura }: Props) => {
   //** Dos elementos "p" que se usarán como texto principal en RectanguloNegro */
   const contenido = () => {
     return (
@@ -60,6 +64,7 @@ const ContenidoInferior = () => {
   return (
     <div>
       <RectanguloNegro
+        anchura={anchura}
         titulo="¿Por qué no publicas tus enlaces aquí también?"
         contenido={contenido}
         pie={pie}

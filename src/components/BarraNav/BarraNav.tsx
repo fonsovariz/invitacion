@@ -21,9 +21,8 @@ type Props = {
  * Un componente que renderiza la barra de navegación principal de la aplicación.
  */
 const BarraNav = ({ anchura }: Props) => {
-  console.log(anchura);
   return (
-    <Contenedor fluid anchura={anchura}>
+    <Contenedor f anchura={anchura}>
       <Row className="d-flex justify-content-between">
         {/** Logotipo */}
         <Columna md="start">
@@ -33,7 +32,7 @@ const BarraNav = ({ anchura }: Props) => {
         </Columna>
 
         {/** Botones de navegación */}
-        {anchura >= 907 && (
+        {anchura >= 992 && (
           <Columna>
             <BotonFunciones
               variant="light"
@@ -63,20 +62,20 @@ const BarraNav = ({ anchura }: Props) => {
           </Columna>
         )}
 
-        {/** Botones de cuenta */}
-        {anchura >= 907 && (
-          <Columna md="auto">
+        <Columna md="end">
+          {/** Botones de cuenta */}
+          {anchura >= 768 && (
             <BotonInicio variant="light">Iniciar sesión</BotonInicio>
+          )}
+          {anchura >= 768 && (
             <Boton variant="dark" style={{ "font-weight": "bold" }}>
               Regístrate
             </Boton>
-          </Columna>
-        )}
+          )}
 
-        {/** Botón del menú */}
-        {anchura <= 906 && (
-          <Columna md="end">
-            <Dropdown>
+          {/** Botón del menú */}
+          {anchura <= 991 && (
+            <Dropdown className="d-inline-block">
               <Menu variant="light" size="lg">
                 <FontAwesomeIcon icon={faBars} />
               </Menu>
@@ -86,13 +85,16 @@ const BarraNav = ({ anchura }: Props) => {
                 <Dropdown.Item>Extensión</Dropdown.Item>
                 <Dropdown.Item>Programas de recomendación</Dropdown.Item>
                 <Dropdown.Item>Personas</Dropdown.Item>
-                <Dropdown.Divider />
-                <Dropdown.Item>Iniciar sesión</Dropdown.Item>
-                <Dropdown.Item>Regístrate</Dropdown.Item>
+
+                {anchura <= 767 && <Dropdown.Divider />}
+                {anchura <= 767 && (
+                  <Dropdown.Item>Iniciar sesión</Dropdown.Item>
+                )}
+                {anchura <= 767 && <Dropdown.Item>Regístrate</Dropdown.Item>}
               </Dropdown.Menu>
             </Dropdown>
-          </Columna>
-        )}
+          )}
+        </Columna>
       </Row>
     </Contenedor>
   );

@@ -22,6 +22,7 @@ export const Contenedor = styled(Container)`
   background-color: black;
   color: white;
   margin-top: 30px;
+  width: 89%;
 `;
 
 export const ColumnaTextual = styled(Col)`

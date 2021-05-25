@@ -6,15 +6,18 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import RectanguloNegro from "./RectanguloNegro/RectanguloNegro";
 import gato from "../images/hero-image.png";
 
+type Props = {
+  anchura: number;
+};
 /**
  * Un componente que renderiza la cabecera de la aplicación
  * utilizando el componente RectanguloNegro.
  */
-const Cabecera = () => {
+const Cabecera = ({ anchura }: Props) => {
   /** Un elemento "p" que se usará como texto principal en RectanguloNegro */
   const contenido = (): ReactElement => {
     return (
-      <p>
+      <p className={anchura <= 767 ? "text-center" : undefined}>
         <span className="font-weight-bold">Invitación</span> es la nueva red
         social donde todos son recompensados. Únete, publica tus enlaces de
         recomendación o invitación y obtén recompensas automáticamente.
@@ -26,6 +29,12 @@ const Cabecera = () => {
   const busqueda = (
     Boton: StyledComponent<Button, any, {}, never>
   ): ReactElement => {
+    const botonComienzaYa = (): ReactElement => (
+      <Boton variant="danger" type="button" className="btn-block">
+        Comienza ya, es gratis
+      </Boton>
+    );
+
     return (
       <Form>
         <Row>
@@ -35,14 +44,13 @@ const Cabecera = () => {
               <FAIcon icon={faSearch} className="text-dark" />
               <FControl type="text" placeholder="Busca códigos de promoción" />
             </Form.Group>
+
+            {/** Botón (Anchura de pantalla de 767px o menos) */}
+            {anchura <= 767 && botonComienzaYa()}
           </Col>
 
-          {/** Botón */}
-          <Col xs={5}>
-            <Boton variant="danger" type="button" className="btn-block">
-              Comienza ya, es gratis
-            </Boton>
-          </Col>
+          {/** Botón (Anchura de pantalla de 767px o más)*/}
+          {anchura >= 768 && <Col xs={5}>{botonComienzaYa()}</Col>}
         </Row>
       </Form>
     );
@@ -51,6 +59,7 @@ const Cabecera = () => {
   /** Rénder */
   return (
     <RectanguloNegro
+      anchura={anchura}
       titulo="La Comunidad de Invitaciones."
       contenido={contenido}
       pie={busqueda}

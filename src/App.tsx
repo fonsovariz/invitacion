@@ -27,12 +27,12 @@ function App() {
   return (
     <>
       <BarraNav anchura={anchura}></BarraNav>
-      <Cabecera></Cabecera>
+      <Cabecera anchura={anchura}></Cabecera>
       <Logotipos></Logotipos>
       <ContenidoSuperior></ContenidoSuperior>
-      <ContenidoInferior></ContenidoInferior>
+      <ContenidoInferior anchura={anchura}></ContenidoInferior>
       <Imagenes></Imagenes>
-      <Pie></Pie>
+      <Pie anchura={anchura}></Pie>
     </>
   );
 }

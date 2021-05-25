@@ -10,7 +10,14 @@ export const H1 = styled.h1`
 /** React Bootstrap */
 export const Contenedor = styled(Container)`
   margin-top: 30px;
-  padding: ${(props) => (props.anchura <= 415 ? "0 10% 0 10%" : "0 7% 0 7%")};
+  padding: ${(props) =>
+    props.anchura <= 415
+      ? "0 10% 0 10%"
+      : props.anchura <= 1000
+      ? "0 5% 0 5%"
+      : props.anchura <= 1200
+      ? "0 4% 0 4%"
+      : null};
 `;
 
 export const Columna = styled(Col)`
@@ -27,7 +34,12 @@ export const BotonClaro = styled(Boton)`
 `;
 
 export const BotonFunciones = styled(BotonClaro)`
-  margin-left: ${(props) => (props.anchura <= 965 ? "4%" : "10%")};
+  margin-left: ${(props) =>
+    props.anchura <= 996 && props.anchura >= 966
+      ? "40px"
+      : props.anchura <= 965
+      ? "4%"
+      : "80px"};
 `;
 
 export const BotonInicio = styled(BotonClaro)`

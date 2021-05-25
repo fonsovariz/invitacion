@@ -4,6 +4,7 @@ import { Row, Col, Button } from "react-bootstrap";
 import { Contenedor, ColumnaTextual, H2, Div, Boton, Img } from "./estilos";
 
 type Props = {
+  anchura: number;
   /** El contenido textual que se mostrará en el lado izquierdo del componente */
   titulo?: string;
   contenido: () => ReactElement;
@@ -30,6 +31,7 @@ type Props = {
  * que sobresale del rectangulo negro.
  */
 const RectanguloNegro = ({
+  anchura,
   titulo,
   contenido,
   pie,
@@ -37,32 +39,34 @@ const RectanguloNegro = ({
   derecha,
 }: Props) => {
   return (
-    <div>
-      <Contenedor>
-        <Row className="d-flex justify-content-between">
-          {/** Lado Izquierdo */}
-          <ColumnaTextual xs={derecha ? 5 : undefined}>
-            {titulo && <H2>{titulo}</H2>}
-            <Div>{contenido()}</Div>
-            {pie && <div>{pie(Boton)}</div>}
+    <Contenedor className={anchura < 500 ? "px-0" : null}>
+      <Row className="d-flex justify-content-between">
+        {/** Lado Izquierdo */}
+        <ColumnaTextual xs={derecha ? 5 : undefined}>
+          {titulo && (
+            <H2 className={anchura <= 767 ? "text-center" : undefined}>
+              {titulo}
+            </H2>
+          )}
+          <Div>{contenido()}</Div>
+          {pie && <div>{pie(Boton)}</div>}
+        </ColumnaTextual>
+
+        {/** Lado Derecho - Imagen*/}
+        {imagen && anchura >= 992 && (
+          <Col xs={imagen.col} className={imagen.colClases}>
+            <Img src={imagen.url} alt={imagen.alt} width={imagen.width} />
+          </Col>
+        )}
+
+        {/** Lado Derecho - Texto */}
+        {derecha && (
+          <ColumnaTextual xs={6} padding="60px 60px 30px 60px">
+            {derecha()}
           </ColumnaTextual>
-
-          {/** Lado Derecho - Imagen*/}
-          {imagen && (
-            <Col xs={imagen.col} className={imagen.colClases}>
-              <Img src={imagen.url} alt={imagen.alt} width={imagen.width} />
-            </Col>
-          )}
-
-          {/** Lado Derecho - Texto */}
-          {derecha && (
-            <ColumnaTextual xs={6} padding="60px 60px 30px 60px">
-              {derecha()}
-            </ColumnaTextual>
-          )}
-        </Row>
-      </Contenedor>
-    </div>
+        )}
+      </Row>
+    </Contenedor>
   );
 };
 

@@ -31,7 +31,7 @@ function App() {
       <Logotipos anchura={anchura}></Logotipos>
       <ContenidoSuperior anchura={anchura}></ContenidoSuperior>
       <ContenidoInferior anchura={anchura}></ContenidoInferior>
-      <Imagenes></Imagenes>
+      <Imagenes anchura={anchura}></Imagenes>
       <Pie anchura={anchura}></Pie>
     </>
   );

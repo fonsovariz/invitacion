@@ -42,7 +42,9 @@ const RectanguloNegro = ({
     <Contenedor className={anchura < 500 ? "px-0" : null}>
       <Row className="d-flex justify-content-between">
         {/** Lado Izquierdo */}
-        <ColumnaTextual xs={derecha ? 5 : undefined}>
+        <ColumnaTextual
+          xs={derecha && anchura > 991 ? 5 : !derecha ? undefined : 12}
+        >
           {titulo && (
             <H2 className={anchura <= 767 ? "text-center" : undefined}>
               {titulo}
@@ -60,12 +62,20 @@ const RectanguloNegro = ({
         )}
 
         {/** Lado Derecho - Texto */}
-        {derecha && (
+        {derecha && anchura > 991 && (
           <ColumnaTextual xs={6} padding="60px 60px 30px 60px">
             {derecha()}
           </ColumnaTextual>
         )}
       </Row>
+
+      {derecha && anchura < 992 && (
+        <Row className="d-flex justify-content-center">
+          <ColumnaTextual xs="center" padding="0 60px 30px 60px">
+            {derecha()}
+          </ColumnaTextual>
+        </Row>
+      )}
     </Contenedor>
   );
 };

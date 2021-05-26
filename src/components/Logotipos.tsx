@@ -38,7 +38,11 @@ const Logotipos = ({ anchura }: Props) => {
 
   /** Rénder */
   return (
-    <Container className={anchura > 991 ? "mt-5 pt-5" : "mt-5"}>
+    <Container
+      className={
+        anchura > 991 ? "mt-5 pt-5" : anchura > 570 ? "mt-5" : "mt-5 px-5"
+      }
+    >
       {/** Primera hilera de logotipos. */}
       <Row className="d-flex align-items-center justify-content-between">
         <Col xs={anchura > 767 ? 2 : undefined}>

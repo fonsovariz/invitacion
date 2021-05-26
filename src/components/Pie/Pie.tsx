@@ -32,8 +32,12 @@ const Pie = ({ anchura }: Props) => {
   /** Tres botones de redes sociales que se usarán como pie en RectanguloNegro*/
   const pie = () => {
     return (
-      <div>
-        <Row>
+      <div className={anchura < 992 ? "mt-4 pt-2" : undefined}>
+        <Row
+          className={
+            anchura < 992 ? "d-flex justify-content-center" : undefined
+          }
+        >
           <Col xs={2}>
             <Button variant="light" className="px-2 py-1">
               <FontAwesomeIcon icon={faFacebook} />
@@ -68,14 +72,22 @@ const Pie = ({ anchura }: Props) => {
             <Boton className="text-white">Guía</Boton>
           </Col>
 
-          <Col className="mr-3">
+          <Col className={anchura < 327 ? "mr-3 mt-3" : "mr-3"}>
             <H3>Yo</H3>
             <Boton className="text-white">Publicar un enlace</Boton>
             <Boton className="text-white">Iniciar sesión</Boton>
             <Boton className="text-white">Regístrate</Boton>
           </Col>
 
-          <Col className="mr-3">
+          <Col
+            className={
+              anchura > 1010
+                ? "mr-3"
+                : anchura > 991 || anchura < 480
+                ? "mr-3 mt-3"
+                : "mr-3"
+            }
+          >
             <H3>Producto</H3>
             <Boton className="text-white text-left">Características</Boton>
             <Boton className="text-white">Extensión</Boton>
@@ -84,7 +96,15 @@ const Pie = ({ anchura }: Props) => {
             <Boton className="text-white">Ayuda</Boton>
           </Col>
 
-          <Col>
+          <Col
+            className={
+              anchura > 1010
+                ? "mr-3"
+                : anchura > 991 || anchura < 480
+                ? "mr-3 mt-3"
+                : "mr-3"
+            }
+          >
             <H3>Empresa</H3>
             <Boton className="text-white">Empleos</Boton>
             <Boton className="text-white">Anunciar</Boton>
@@ -106,7 +126,13 @@ const Pie = ({ anchura }: Props) => {
         derecha={derecha}
       />
 
-      <P className="my-4 text-center text-muted">
+      <P
+        className={
+          anchura < 992
+            ? "my-4 text-center text-muted px-5"
+            : "my-4 text-center text-muted"
+        }
+      >
         All product names, logos, and brands are property of their respective
         owners. Feel free to check out our <span>privacy policy</span> and{" "}
         <span>terms of service</span>.

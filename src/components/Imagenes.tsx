@@ -18,7 +18,7 @@ type Props = {
  */
 const Imagenes = ({ anchura }: Props) => {
   return (
-    <Container className="my-5 pt-3">
+    <Container className={anchura > 570 ? "my-5 pt-3" : "my-5 pt-3 px-5"}>
       <Row>
         {anchura > 767 && (
           <Col xs={3} className="px-0">

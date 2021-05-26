@@ -21,7 +21,15 @@ type Props = {
  */
 const ContenidoSuperior = ({ anchura }: Props) => {
   return (
-    <Container className={anchura > 991 ? "my-5 pt-5" : "my-5 pt-2"}>
+    <Container
+      className={
+        anchura > 991
+          ? "my-5 pt-5"
+          : anchura > 570
+          ? "my-5 pt-2"
+          : "my-5 pt-2 px-5"
+      }
+    >
       <Row className="d-flex justify-content-between align-items-center">
         {/** Ilustración en la izquierda */}
         {anchura > 991 && (

@@ -17,7 +17,7 @@
   <p align="center">
     The new social network where everyone gets rewarded.
     <br />
-    <a href="https://github.com/fonsovariz/invitacion/blob/main/README.md"><strong><span style="font-style: italic">README</span> en español »</strong></a>
+    <a href="https://github.com/fonsovariz/invitacion/blob/main/README.md"><strong><span style="font-style: italic">README</span> en castellano »</strong></a>
     <br />
     <br />
     <a href="https://invtcn.vercel.app/">View Demo</a>
